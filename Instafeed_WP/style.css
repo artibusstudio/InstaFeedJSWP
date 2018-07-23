@@ -1,0 +1,256 @@
+/*--------------------------------------------------------------
+GERAL
+--------------------------------------------------------------*/
+html {
+	font-family: "HelveticaNeue-Roman", "Helvetica 55 Roman", Helvetica, Arial, sans-serif;
+	line-height: 1.6;
+	text-rendering: optimizeSpeed;
+	-webkit-font-smoothing: antialiased;
+	font-size: 100%;
+	-ms-text-size-adjust: 100%;
+	-webkit-text-size-adjust: 100%;
+	overflow-x: hidden
+}
+body {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box
+}
+ul{
+  margin: 0;
+  padding: 0;
+}
+li{
+  list-style: none;
+  margin: 0.5em 0;
+}
+/*--------------------------------------------------------------
+HEADER
+--------------------------------------------------------------*/
+header{
+  min-height: 60px;
+  z-index: 2;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+.art-navbar-slide-menu{
+  width: 100%;
+}
+.art-navbar-slide-menu ul{
+  text-align: right;
+}
+.art-navbar-slide-menu li{
+  display: inline;
+  line-height: 55px;
+}
+.art-navbar-slide-menu li a{
+  text-decoration: none;
+  color: #FFF;
+}
+.art-open-slide{
+  position: absolute;
+  margin: 1em;
+}
+header .art-navbar-slide-menu li{
+  margin: auto 0.5em;
+}
+.art-navbar-slide-menu a:hover{
+  color: #358cdc;
+  padding: 1em 0 0.5em 0;
+}
+.art-side-nav{
+  height:100%;
+  width:0;
+  position:fixed;
+  z-index:5;
+  top:0;
+  left:0;
+  background-color: rgba(255, 255, 255, 0.350);
+  opacity:0.9;
+  overflow-x:hidden;
+  padding-top:60px;
+  transition:0.5s;
+}
+.art-side-nav a{
+  padding:10px 10px 10px 30px;
+  text-decoration:none;
+  font-size:22px;
+  color:#000000;
+  display:block;
+  transition:0.3s;
+}
+.art-side-nav a:hover{
+  color:#fff;
+}
+.art-side-nav .art-btn-close{
+  position:absolute;
+  top:0;
+  right:22px;
+  font-size:36px;
+  margin-left:50px;
+  color: #212121;
+}
+/*--------------------------------------------------------------
+FOOTER
+--------------------------------------------------------------*/
+footer{
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: 1;
+  color: #FFF;
+}
+footer span{
+  margin: auto 0.5em
+}
+/*--------------------------------------------------------------
+TEMPLATE DA PÁGINA FRONT-PAGE.PHP
+--------------------------------------------------------------*/
+.art-main-section-front-page{ 
+ display: flex;
+ flex-direction: row;
+ justify-content: center;
+ align-items: center;
+ background-attachment: fixed;
+ background-size: cover;
+ background-position: left;
+ background-repeat: no-repeat;
+ width: 100%;
+ min-height: 100vh;
+}
+.art-main-fp-right{
+  width: 50%;
+  height: auto;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  -webkit-transform: translateZ(0);
+}
+.art-content-right{
+  width: 100%;
+  margin: 2em;
+  color: #FFF;
+}
+.art-content-right svg{
+  vertical-align: middle;
+  margin: auto 1em;
+  fill: #FFF;
+}
+.art-insta-feed-img{
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0;
+}
+/*--------------------------------------------------------------
+CONTEUDO DA PÁGINA FRONT-PAGE.PHP
+--------------------------------------------------------------*/
+.art-main-fp-left{
+  width: 50%;
+  height: 100vh;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+}
+.art-main-content-div{
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2em;
+}
+.art-featured-content-img{
+  width: 40%;
+}
+.art-featured-content-img img{
+  width: 50%;
+  height: auto;
+  margin: 0 auto;
+  border-radius: 50%;
+}
+.art-main-content-text{
+  width: 55%;
+  color: #FFF;
+  text-align: left;
+}
+.art-main-content-text h3{
+  margin: 0;
+}
+.art-main-content-text p{
+  margin: 0;
+  padding: 0;
+}
+.art-svg-content-icon svg{
+  margin: 2.3em 0.5em 0 0;
+  fill: #FFF;
+}
+/*--------------------------------------------------------------
+INSTAFEED JS
+--------------------------------------------------------------*/
+.art-main-div-instafeed{
+  width: 22%;
+  height: auto;
+  position: relative;
+  margin: 0 0 0.5em 1em;
+}
+.art-main-div-image{
+  width: 100%;
+  height: 100%;
+}
+.art-main-div-image img{
+  width: 100%;
+  height: 100%;
+}
+.art-overlay-instafeed-content{
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  background: rgba(0, 0, 0, 0.50);
+  width: 100%;
+  min-height: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+}
+.art-overlay-instafeed-content span{
+  margin: 0.7rem;
+  color: #FFF;
+}
+.art-overlay-instafeed-content p{
+  margin: 0;
+  padding: 0;
+}
+.art-overlay-instafeed-content:hover{
+  opacity: 1;
+}
+.art-svg-icon{
+  width: 20px;
+  vertical-align: middle;
+  margin-right: 0.5em;
+}
+.art-heart{
+  fill: #f44242;
+}
+.art-coments{
+  fill: #FFF;
+}
+.art-instafedd-load-btn{
+  background-color: #FFFFFF;
+  color: #000;
+  border-radius: 10px;
+  border: none;
+  min-width: 100px;
+  min-height: 30px;
+  margin: 1em 0;
+}
